@@ -2,15 +2,37 @@
 
 A new Flutter project.
 
-## Getting Started
+## The app structure
 
-This project is a starting point for a Flutter application.
+- lib(folder)
 
-A few resources to get you started if this is your first Flutter project:
+  - app(folder)
+    - my_app.dart(root of the app)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  - core(folder)  
+    - ui_kit(folder)
+      - global_widgets(folder)
+        - custom_app_bar.dart(contains a customized appbar for use throughout the app)
+        - custom_divider.dart(contains a customized divider for use throughout the app)
+        - custom_search_bar.dart(contains a customized search bar for use throughout the app)  
+      - theme(folder)
+        - app_text_theme.dart(contains a text theme for the app)
+        - color_theme.dart(contains a color theme for the app)  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  - data(folder)
+    - models(folder)
+      - therapist_model.dart(data model representing the therapist)
+    - repository(folder)
+      - therapist_repository.dart(repository for interacting with therapist data)
+
+  - presentation(folder)
+    - choose_therapist_screen(folder)
+        - cubit(folder)
+            - choose_therapist_cubit.dart(Cubit to control the state of the choose_therapist_screen)
+            - choose_therapist_state.dart(State used by ChooseTherapistCubit)
+        - screens(folder)  
+            - choose_therapist_page.dart(Main UI widget of the choose_therapist_screen)
+        - widgets(folder)
+            - therapist_card_widget.dart(widget displaying therapist information)
+
+  - main.dart(application entry point)    
