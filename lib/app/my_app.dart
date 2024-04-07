@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:therapist/presentation/screens/choose_therapist_screen/choose_therapist_page.dart';
+import 'package:therapist/presentation/choose_therapist/screens/choose_therapist_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
