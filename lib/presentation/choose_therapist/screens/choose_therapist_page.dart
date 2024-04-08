@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:therapist/core/ui_kit/global_widgets/custom_app_bar.dart';
 import 'package:therapist/core/ui_kit/global_widgets/custom_divider.dart';
+import 'package:therapist/core/ui_kit/global_widgets/custom_search_bar.dart';
 
 class ChooseTherapistPage extends StatelessWidget {
   const ChooseTherapistPage({super.key});
@@ -19,6 +20,7 @@ class ChooseTherapistPage extends StatelessWidget {
         child: Column(
           children: [
             CustomDivider(),
+            CustomSearchBar(),
           ],
         ),
       ),
