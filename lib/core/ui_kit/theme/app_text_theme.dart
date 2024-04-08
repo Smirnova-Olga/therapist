@@ -10,4 +10,10 @@ abstract class AppTextTheme {
     height: 1.238,
     color: ColorTheme.title,
   );
+  static const hint = TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: ColorTheme.black,
+  );
 }
