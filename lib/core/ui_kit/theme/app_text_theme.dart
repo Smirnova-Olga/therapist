@@ -20,7 +20,7 @@ abstract class AppTextTheme {
     fontFamily: 'Gilroy',
     fontWeight: FontWeight.w700,
     fontSize: 12,
-    height: 1.24, // 14.86 / 12 = 1.24 to achieve the same line-height
+    height: 1.24,
     letterSpacing: 0.24,
     color: ColorTheme.blue,
   );
