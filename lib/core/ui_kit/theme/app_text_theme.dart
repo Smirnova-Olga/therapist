@@ -16,4 +16,28 @@ abstract class AppTextTheme {
     fontSize: 14,
     color: ColorTheme.black,
   );
+  static const selectedToggle = TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w700,
+    fontSize: 12,
+    height: 1.24, // 14.86 / 12 = 1.24 to achieve the same line-height
+    letterSpacing: 0.24,
+    color: ColorTheme.blue,
+  );
+  static const unSelectedToggle = TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w700,
+    fontSize: 12,
+    height: 1.24,
+    letterSpacing: 0.24,
+    color: ColorTheme.black,
+  );
+  static const counterText = TextStyle(
+    fontFamily: 'Bebas Neue',
+    fontWeight: FontWeight.w400,
+    fontSize: 12,
+    height: 1.2,
+    letterSpacing: 0.24,
+    color: ColorTheme.white,
+  );
 }
