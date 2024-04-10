@@ -48,4 +48,30 @@ abstract class AppTextTheme {
     letterSpacing: 0.24,
     color: ColorTheme.white,
   );
+  static const therapistName = TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w700,
+    fontSize: 20,
+    color: ColorTheme.black,
+    overflow: TextOverflow.ellipsis,
+  );
+  static const rating = TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: ColorTheme.grey1,
+  );
+  static const experience = TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w700,
+    fontSize: 12,
+    color: ColorTheme.deepOrange,
+  );
+  static const therapistDescription = TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: ColorTheme.grey1,
+    overflow: TextOverflow.fade,
+  );
 }

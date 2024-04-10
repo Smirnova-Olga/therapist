@@ -4,8 +4,11 @@ import 'package:therapist/core/ui_kit/global_widgets/custom_app_bar.dart';
 import 'package:therapist/core/ui_kit/global_widgets/custom_divider.dart';
 import 'package:therapist/core/ui_kit/global_widgets/custom_search_bar.dart';
 import 'package:therapist/core/ui_kit/global_widgets/gradient_button.dart';
+import 'package:therapist/data/repository/therapist_repository.dart';
 import 'package:therapist/presentation/choose_therapist/cubit/choose_therapist_cubit.dart';
+import 'package:therapist/presentation/choose_therapist/widgets/therapist_card_carousel.dart';
 import 'package:therapist/presentation/choose_therapist/widgets/therapist_bottom_bar_widget.dart';
+import 'package:therapist/presentation/choose_therapist/widgets/therapists_list_widget.dart';
 
 class ChooseTherapistPage extends StatelessWidget {
   const ChooseTherapistPage({super.key});
@@ -13,7 +16,7 @@ class ChooseTherapistPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ChooseTherapistCubit(),
+      create: (context) => ChooseTherapistCubit(TherapistRepository())..init(),
       child: Scaffold(
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(kToolbarHeight),
@@ -22,12 +25,24 @@ class ChooseTherapistPage extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.only(bottom: 32),
           child: Column(
             children: [
               const CustomDivider(),
               const CustomSearchBar(),
-              const Expanded(child: SizedBox()),
+              BlocBuilder<ChooseTherapistCubit, ChooseTherapistState>(
+                builder: (context, state) {
+                  return Expanded(
+                    child: state.viewMode == ViewMode.cards
+                        ? TherapistCardCarousel(
+                            therapists: state.therapists,
+                          )
+                        : TherapistListWidget(
+                            therapists: state.therapists,
+                          ),
+                  );
+                },
+              ),
               GradientButton(
                 text: 'Make An Appointment',
                 onTap: () {},

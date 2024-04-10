@@ -13,7 +13,7 @@ class TherapistBottomBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       child: Container(
         height: 80,
         decoration: BoxDecoration(
@@ -54,7 +54,7 @@ class DropDownButton extends StatelessWidget {
     return Container(
       height: 50,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: ColorTheme.white,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: ColorTheme.dropdownBorder),
       ),
@@ -67,8 +67,10 @@ class DropDownButton extends StatelessWidget {
               'assets/icons/caret_down.svg',
             ),
             onChanged: (String? newValue) {},
+            dropdownColor: ColorTheme.white,
+            borderRadius: BorderRadius.circular(12),
             items: [
-              DropdownMenuItem<String>(
+              DropdownMenuItem(
                 value: 'German',
                 child: SizedBox(
                   child: Image.asset(
@@ -181,7 +183,7 @@ class LikeWidget extends StatelessWidget {
           icon: SvgPicture.asset(
             'assets/icons/heart.svg',
           ),
-          iconSize: 20.83,
+          iconSize: 20,
           style: OutlinedButton.styleFrom(
             minimumSize: const Size(50, 50),
             maximumSize: const Size(50, 50),
