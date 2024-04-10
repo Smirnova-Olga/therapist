@@ -8,7 +8,15 @@ abstract class AppTextTheme {
     fontSize: 25,
     letterSpacing: 0.02,
     height: 1.238,
-    color: ColorTheme.title,
+    color: ColorTheme.deepBlue,
+  );
+  static const gradientButton = TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w700,
+    letterSpacing: 0.02,
+    height: 1.238,
+    fontSize: 14,
+    color: ColorTheme.white,
   );
   static const hint = TextStyle(
     fontFamily: 'Gilroy',
