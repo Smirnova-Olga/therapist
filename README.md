@@ -36,3 +36,8 @@ A new Flutter project.
                 - therapist_card_widget.dart(widget displaying therapist information)
 
     - main.dart(application entry point)    
+
+
+
+    
+![Therapist Page](assets/gifs/therapist_page.gif)
